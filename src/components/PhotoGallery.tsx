@@ -2,13 +2,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Gallery, Camera, Aperture } from "lucide-react";
+import { Images, Camera, Aperture } from "lucide-react";
 
 const PhotoGallery = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = [
-    { id: "all", label: "All", icon: <Gallery className="w-5 h-5" /> },
+    { id: "all", label: "All", icon: <Images className="w-5 h-5" /> },
     { id: "projects", label: "Projects", icon: <Camera className="w-5 h-5" /> },
     { id: "events", label: "Events", icon: <Aperture className="w-5 h-5" /> },
   ];
