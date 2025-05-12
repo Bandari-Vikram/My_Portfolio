@@ -80,6 +80,16 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+  
+  .photo-hover-effect {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .photo-hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(155, 135, 245, 0.6), 
+                0 8px 10px -6px rgba(65, 224, 201, 0.4);
+  }
 }
 
 /* Floating animation for particles */
@@ -104,6 +114,18 @@
   }
 }
 
+/* Photo gallery animations */
+@keyframes photo-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* Hover effects for cards and buttons */
 .glass-card {
   transition: all 0.3s ease;
@@ -114,3 +136,4 @@
   box-shadow: 0 10px 25px -5px rgba(155, 135, 245, 0.4), 
               0 8px 10px -6px rgba(65, 224, 201, 0.3);
 }
+

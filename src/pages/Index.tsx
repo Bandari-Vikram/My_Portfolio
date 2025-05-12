@@ -1,10 +1,10 @@
 
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Upload, Star, Sparkles } from "lucide-react";
+import { ChevronDown, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import ProfileSection from "@/components/ProfileSection";
+import PhotoGallery from "@/components/PhotoGallery";
 
 const Index = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -88,33 +88,8 @@ const Index = () => {
       <section ref={aboutRef} id="about" className="py-20 px-4 relative z-10">
         <ProfileSection />
         
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gradient mb-4">Resume</h2>
-            <div className="h-1 w-24 mx-auto bg-gradient-to-r from-neon-purple to-neon-teal rounded-full"></div>
-          </div>
-          
-          <div className="glass-card rounded-xl p-8 border border-white/10 text-center neon-shadow-sm">
-            <h3 className="text-2xl mb-4">Upload Your Resume</h3>
-            <p className="text-muted-foreground mb-6">Drop your resume file or click to browse</p>
-            
-            <div className="flex justify-center mb-6">
-              <label htmlFor="resume-upload" className="cursor-pointer">
-                <div className="border-2 border-dashed border-neon-purple/40 rounded-lg p-12 flex flex-col items-center justify-center hover:border-neon-purple/70 transition-all">
-                  <Upload className="w-12 h-12 text-neon-purple mb-4" />
-                  <p className="text-muted-foreground">Upload PDF, DOCX (Max 5MB)</p>
-                </div>
-                <input type="file" id="resume-upload" className="hidden" accept=".pdf,.docx" />
-              </label>
-            </div>
-            
-            <div className="flex justify-center mt-4">
-              <Link to="/resume" className="text-neon-purple hover:text-neon-teal transition-colors">
-                Or view my current resume
-              </Link>
-            </div>
-          </div>
-        </div>
+        {/* Photo Gallery */}
+        <PhotoGallery />
       </section>
     </div>
   );
