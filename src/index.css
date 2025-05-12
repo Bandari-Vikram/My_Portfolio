@@ -81,3 +81,36 @@
     scrollbar-width: none;
   }
 }
+
+/* Floating animation for particles */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+}
+
+/* Hover effects for cards and buttons */
+.glass-card {
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(155, 135, 245, 0.4), 
+              0 8px 10px -6px rgba(65, 224, 201, 0.3);
+}
